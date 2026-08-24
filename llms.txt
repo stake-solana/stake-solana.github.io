@@ -1,0 +1,27 @@
+# Stake Solana — Stake SOL (Native Delegation & Liquid Staking) Reference
+
+> Earn SOL staking rewards on Solana via native delegation to a validator or liquid staking (jitoSOL, mSOL). Rewards come from Solana inflation minus commission; epochs bring warm-up and cool-down. Non-custodial. Independent, not affiliated with Solana.
+
+## Key Facts
+- Two paths: native staking (delegate SOL to a validator; SOL stays in a stake account under your keys) and liquid staking (deposit SOL, receive a liquid staking token such as jitoSOL or mSOL that stays usable in DeFi)
+- Rewards: from Solana's staking inflation minus validator/protocol commission; amounts vary (no fixed rate)
+- Epochs: newly delegated stake warms up before it is fully active; deactivating native stake cools down over an epoch boundary before SOL is withdrawable
+- Liquid staking exit: redeem or swap the receipt token, subject to available liquidity
+- Custody: non-custodial — native stake accounts remain under your keys; liquid staking uses public smart contracts your wallet signs
+- Risks: slashing/penalty risk for validator faults, smart-contract risk (liquid staking programs), de-peg risk of the liquid staking token vs SOL, illiquidity during cool-down; returns never guaranteed
+- Independent resource — NOT affiliated with or endorsed by Solana or the Solana Foundation
+
+## Internal Sections & App Navigation
+- [What is Stake Solana?](#what)
+- [How Solana staking works](#how)
+- [Native delegation vs liquid staking](#native-vs-liquid)
+- [Rewards & inflation](#rewards)
+- [Epochs, warm-up & cool-down](#epochs)
+- [Liquid staking tokens: jitoSOL, mSOL](#receipts)
+- [Risks](#risks)
+- [FAQ](#faq)
+- [Notes before you stake](#notes)
+- [Open Stake Solana App](dashboard/index.html)
+
+## Disclaimer
+Independent page. Not affiliated with or endorsed by Solana or the Solana Foundation. Not financial advice.
