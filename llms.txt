@@ -1,27 +1,23 @@
-# Stake Solana — Stake SOL (Native Delegation & Liquid Staking) Reference
+# Stake Solana
 
-> Earn SOL staking rewards on Solana via native delegation to a validator or liquid staking (jitoSOL, mSOL). Rewards come from Solana inflation minus commission; epochs bring warm-up and cool-down. Non-custodial. Independent, not affiliated with Solana.
+> Stake Solana by delegating SOL to a validator or holding a liquid staking token to earn staking rewards.
 
-## Key Facts
-- Two paths: native staking (delegate SOL to a validator; SOL stays in a stake account under your keys) and liquid staking (deposit SOL, receive a liquid staking token such as jitoSOL or mSOL that stays usable in DeFi)
-- Rewards: from Solana's staking inflation minus validator/protocol commission; amounts vary (no fixed rate)
-- Epochs: newly delegated stake warms up before it is fully active; deactivating native stake cools down over an epoch boundary before SOL is withdrawable
-- Liquid staking exit: redeem or swap the receipt token, subject to available liquidity
-- Custody: non-custodial — native stake accounts remain under your keys; liquid staking uses public smart contracts your wallet signs
-- Risks: slashing/penalty risk for validator faults, smart-contract risk (liquid staking programs), de-peg risk of the liquid staking token vs SOL, illiquidity during cool-down; returns never guaranteed
-- Independent resource — NOT affiliated with or endorsed by Solana or the Solana Foundation
+## Pages
+- [Stake Solana](https://insert_url/): Native delegation, liquid staking, reward calculations, fees, unstaking, and frequently asked questions.
+- [SOL staking APR](https://insert_url/#rewards): Interactive net APR calculator with gross APR, validator commission, and liquid staking pool reward fees.
+- [SOL unstaking](https://insert_url/#unstaking): Native deactivation, epoch boundaries, withdrawal, and liquid staking exits.
 
-## Internal Sections & App Navigation
-- [What is Stake Solana?](#what)
-- [How Solana staking works](#how)
-- [Native delegation vs liquid staking](#native-vs-liquid)
-- [Rewards & inflation](#rewards)
-- [Epochs, warm-up & cool-down](#epochs)
-- [Liquid staking tokens: jitoSOL, mSOL](#receipts)
-- [Risks](#risks)
-- [FAQ](#faq)
-- [Notes before you stake](#notes)
-- [Open Stake Solana App](dashboard/index.html)
+## Staking methods
+Native delegation places SOL in a stake account controlled by its stake and withdrawal authorities. Each stake account delegates to one validator. Liquid staking issues a transferable token representing a claim on a pool's stake.
 
-## Disclaimer
-Independent page. Not affiliated with or endorsed by Solana or the Solana Foundation. Not financial advice.
+## Reward calculations
+Native net APR = gross APR multiplied by (1 minus validator commission).
+Liquid net APR = gross APR multiplied by (1 minus validator commission) multiplied by (1 minus pool reward fee).
+Annual SOL rewards = staked SOL multiplied by net APR. Divide the annual result by 12 for the monthly average. Percentages are converted to decimals for multiplication.
+The calculator starts with 100 SOL, 6.5% gross APR, and 5% validator commission: 6.175% net APR and 6.175 SOL in annual rewards before compounding and transaction or entry/exit fees. The editable liquid pool fee starts at 2%, giving 6.0515% net APR with the same other inputs. Rates vary by epoch.
+
+## Fees and timing
+The network base fee is 5,000 lamports per signature plus any priority fee. Stake accounts also require a rent-exempt reserve. Native activation and deactivation follow epoch boundaries; an epoch is roughly 2-3 days. Network cooldown capacity can extend unstaking over multiple epochs. Inactive stake is withdrawn in a separate transaction. A liquid staking token can be swapped subject to liquidity, market price, and slippage; pool redemption follows its own schedule.
+
+## Security
+Review native stake and withdrawal authorities, validator performance, and commission. For liquid staking, review token mint addresses, contracts, audits, upgrade controls, and redemption terms. SOL price, validator performance, smart contracts, and market liquidity affect staking positions.
